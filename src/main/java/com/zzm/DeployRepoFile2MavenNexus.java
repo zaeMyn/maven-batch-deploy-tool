@@ -277,7 +277,7 @@ public class DeployRepoFile2MavenNexus {
       BufferedReader reader = new BufferedReader(inputStreamReader);
       String line;
       StringBuffer logBuffer = new StringBuffer();
-      logBuffer.append("\n\n\n=======================================\n");
+      logBuffer.append("\n=======================================\n");
       while ((line = reader.readLine()) != null) {
         if (line.startsWith("[INFO]") || line.startsWith("Upload")) {
           logBuffer.append(Thread.currentThread().getName() + " : " + line + "\n");
