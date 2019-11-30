@@ -80,11 +80,11 @@ public class DeployRepoFile2MavenNexus {
       e.printStackTrace();
     }
     stopWatch.stop();
-    System.out.println("总耗时：" + DurationFormatUtils.formatDurationHMS(stopWatch.getTime()));
+    System.out.println("total cost ：" + DurationFormatUtils.formatDurationHMS(stopWatch.getTime()));
   }
 
   private static void checkSettingsXml() {
-    System.out.println("config settingsXml path:" + settingsXml);
+    System.out.println("config settingsXml path ::: " + settingsXml);
     try {
       File settingsXmlFile = new File(settingsXml);
       if (settingsXmlFile.exists() && settingsXmlFile.isFile()) {
@@ -99,7 +99,7 @@ public class DeployRepoFile2MavenNexus {
           if (localRepositoryValue.equalsIgnoreCase(repoDir) || localRepositoryValue
               .equalsIgnoreCase(repoDir + "\\") || localRepositoryValue
               .equalsIgnoreCase(repoDir + "/")) {
-            error("local.mvn.settings.xml.location的值不能是" + repoDir);
+            error("local.mvn.settings.xml.location should not be " + repoDir);
             System.exit(0);
           }
         }
