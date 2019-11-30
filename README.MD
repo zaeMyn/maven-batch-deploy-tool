@@ -10,12 +10,12 @@
 * -Dsources=./path/to/artifact-name-1.0-sources.jar
 * -Djavadoc=./path/to/artifact-name-1.0-javadoc.jar
 
-##使用
-######修改maven_config.properties文件。
-######java -jar maven-batch-deploy-tool-1.0.jar
+##使用  
+######修改maven_config.properties文件。  
+######java -jar maven-batch-deploy-tool-1.0.jar  
 
-##要求(注意)
-######1.settings.xml里面需要配置nexus的用户密码，以及资源库Id
-######2.settings.xml里面[localRepository]不能与与maven_config.properties的待上传路径是同一个
-######3.本地的settings.xml参考[settings-reference.xml](./settings-reference.xml)
+##要求(注意)  
+######1.settings.xml里面需要配置nexus的用户密码，以及资源库Id  
+######2.settings.xml里面[localRepository]不能与与maven_config.properties的待上传路径是同一个  
+######3.本地的settings.xml参考[settings-reference.xml](./settings-reference.xml)  
 ######4.上传如果感觉慢的话，推荐用http://github.com/simpligility/maven-repository-tools
