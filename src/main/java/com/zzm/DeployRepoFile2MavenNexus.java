@@ -115,6 +115,7 @@ public class DeployRepoFile2MavenNexus {
 
   public static void main(String[] args) {
     //deploy(new File("G:\\dev\\maven_repository_zzm").listFiles());
+    long startTime = System.currentTimeMillis();
     deploy(new File(repoDir).listFiles());
     /*if(checkArgs(args)){
       File file = new File(args[0]);
@@ -126,6 +127,8 @@ public class DeployRepoFile2MavenNexus {
     } catch (IOException e) {
       e.printStackTrace();
     }
+    long endTime = System.currentTimeMillis();
+    System.out.println("耗时："+(endTime-startTime)+"ms");
   }
 
   public static void error(String error) {
